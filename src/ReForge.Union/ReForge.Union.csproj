@@ -12,6 +12,7 @@
         <Authors>Nicholas Alcorso</Authors>
         <Company>GameForge Pty Ltd</Company>
         <PackageId>ReForge.Union</PackageId>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/nalcorso/ReForge.Union</PackageProjectUrl>
         <PackageIcon>icon.png</PackageIcon>
