@@ -5,9 +5,13 @@
 ![GitHub License](https://img.shields.io/github/license/nalcorso/ReForge.Union)
 ![NuGet Version](https://img.shields.io/nuget/v/ReForge.Union)
 
-> Warning: This project is in the early stages of development and should be used with caution.
+> ⚠️ This project is in the early stages of development and should be used with caution. It is currently slower, uses more memory and is less feature-rich than other libraries for implementing Discriminated Unions in C#. Please consider using [OneOf](https://github.com/mcintyre321/OneOf/) for production use.
 
-ReForge.Union is a source generator for C# that provides an easy way to implement basic Discriminated Unions in your code.
+ReForge.Union is a source generator for C# that provides an easy way to implement basic Discriminated Unions in your code, and certainly for production use.
+
+## Alternatives
+
+[OneOf](https://github.com/mcintyre321/OneOf/) is a mature and widely used library for implementing Discriminated Unions in C#. This is the preferred choice for most projects.
 
 ## Getting Started
 
@@ -21,9 +25,9 @@ dotnet add package ReForge.Union
 
 To create a Discriminated Union, you need to define an abstract record and mark it with the `[Union]` attribute. Each variant of the union is a nested record marked with the `[Variant]` attribute.
 
-> Note: The `partial` keyword is required for the union and its variants.
+> 🔔 The `partial` keyword is required for both the union and its variants.
 
-> Note: The variants must be of the same type (record, class, or struct) as the union.
+> 🔔 A Union can be defined as a `class`, `record` or `struct`, this type must be consistent across all variants.
 
 ```csharp
 [Union]
