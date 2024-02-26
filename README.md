@@ -1,3 +1,5 @@
+<img src="images/icon.png" alt="Icon" width="200"/>
+
 # ReForge.Union
 
 ![GitHub License](https://img.shields.io/github/license/nalcorso/ReForge.Union)
@@ -45,6 +47,56 @@ The source generator will automatically generate the following methods for the u
 - `TryAs<T>(out T? value)`: Tries to cast the union to a specific variant.
 - `Match<T>(Func<Circle, T>? circleFunc = null, Func<Rectangle, T>? rectangleFunc = null, Func<Triangle, T>? triangleFunc = null)`: Matches the union to a specific function based on its variant.
 
+Sure, here's an example of an "Examples" section you could add to your `README.md` file. This section provides a few examples of how to use the `Shape` union and its variants in your code.
+
+## Examples
+
+Here are a few examples of how to use the `Shape` union and its variants:
+
+### Creating a Shape
+
+You can create a `Shape` by instantiating one of its variants:
+
+```csharp
+Shape circle = new Shape.Circle(5);
+Shape rectangle = new Shape.Rectangle(4, 6);
+Shape triangle = new Shape.Triangle(3, 4, 5);
+```
+
+### Checking the Variant of a Shape
+
+You can check the variant of a `Shape` using the `Is<T>()` method:
+
+```csharp
+if (shape.Is<Shape.Circle>())
+{
+    Console.WriteLine("The shape is a circle.");
+}
+```
+
+### Casting a Shape to a Specific Variant
+
+You can cast a `Shape` to a specific variant using the `As<T>()` method:
+
+```csharp
+Shape.Circle circle = shape.As<Shape.Circle>();
+```
+
+### Using the Match Method
+
+You can use the `Match<T>()` method to execute a specific function based on the variant of a `Shape`:
+
+```csharp
+double area = shape.Match(
+    circleFunc: circle => Math.PI * circle.Radius * circle.Radius,
+    rectangleFunc: rectangle => rectangle.Width * rectangle.Height,
+    triangleFunc: triangle =>
+    {
+        var s = (triangle.Side1 + triangle.Side2 + triangle.Side3) / 2;
+        return Math.Sqrt(s * (s - triangle.Side1) * (s - triangle.Side2) * (s - triangle.Side3));
+    });
+```
+
 You can also define custom methods for the union and its variants by using partial classes.
 
 ```csharp
@@ -57,13 +109,18 @@ public partial record Shape
         {
             var s = (triangle.Side1 + triangle.Side2 + triangle.Side3) / 2;
             return Math.Sqrt(s * (s - triangle.Side1) * (s - triangle.Side2) * (s - triangle.Side3));
-        });
+        }
+    );
 }
 ```
 
 ## Contributing
 
-Thank you for considering contributing to ReForge.Union! Whether you're reporting a bug, discussing a feature request, or contributing code, we appreciate your effort.
+Thank you for considering contributing to ReForge.Union! Please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file for more information.
+
+## Change Log
+
+Please refer to the [CHANGELOG.md](CHANGELOG.md) file for more information.
 
 ## License
 
