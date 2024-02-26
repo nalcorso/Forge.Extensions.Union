@@ -31,7 +31,7 @@ public abstract partial record Shape
     public partial record Rectangle(double Width, double Height);
 
     [Variant]
-    public record Triangle(double Side1, double Side2, double Side3);
+    public partial record Triangle(double Side1, double Side2, double Side3);
 }
 ```
 
