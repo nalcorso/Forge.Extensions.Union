@@ -63,12 +63,11 @@ public class UnionSourceGenerator : IIncrementalGenerator
         sourceBuilder.AppendLine("using System.Diagnostics.CodeAnalysis;");
             
             
-        NamespaceDeclarationSyntax? namespaceDeclarationSyntax = null;
-        if (SyntaxNodeHelper.TryGetParentSyntax(typeDeclaration, out namespaceDeclarationSyntax))
+        if (SyntaxNodeHelper.TryGetParentSyntax(typeDeclaration, out NamespaceDeclarationSyntax? namespaceDeclarationSyntax))
         {
-            var namespaceName = namespaceDeclarationSyntax.Name.ToString();
+            var namespaceName = namespaceDeclarationSyntax!.Name.ToString();
 
-            Log(context, "Detected Namespace: " + namespaceName);
+            //Log(context, "Detected Namespace: " + namespaceName);
             sourceBuilder.AppendLine($"namespace {namespaceName}");
         }
             
@@ -81,7 +80,7 @@ public class UnionSourceGenerator : IIncrementalGenerator
             _ => throw new InvalidOperationException("Invalid type declaration")
         };
         var unionAccessModifierString = typeDeclaration.Modifiers.ToString();
-        Log(context, "Access Modifier: " + unionAccessModifierString);
+        //Log(context, "Access Modifier: " + unionAccessModifierString);
 
         var nestedVariantTypes = typeDeclaration
             .DescendantNodes()
@@ -152,8 +151,8 @@ public class UnionSourceGenerator : IIncrementalGenerator
 
         context.AddSource($"{unionName}_Union.g.cs", sourceBuilder.ToString());
     }
-        
-    public static string Indent(int indentLevel)
+
+    private static string Indent(int indentLevel)
     {
         return new string('\t', indentLevel);
     }
