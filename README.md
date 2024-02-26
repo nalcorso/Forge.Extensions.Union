@@ -1,5 +1,8 @@
 # ReForge.Union
 
+![GitHub License](https://img.shields.io/github/license/nalcorso/ReForge.Union)
+![NuGet Version](https://img.shields.io/nuget/v/ReForge.Union)
+
 > Warning: This project is in the early stages of development and should be used with caution.
 
 ReForge.Union is a source generator for C# that provides an easy way to implement basic Discriminated Unions in your code.
