@@ -7,7 +7,11 @@
 
 > Warning: This project is in the early stages of development and should be used with caution.
 
-ReForge.Union is a source generator for C# that provides an easy way to implement basic Discriminated Unions in your code.
+ReForge.Union is a source generator for C# that provides an easy way to implement basic Discriminated Unions in your code, and certainly for production use.
+
+## Alternatives
+
+[OneOf](https://github.com/mcintyre321/OneOf/) is a mature and widely used library for implementing Discriminated Unions in C#. This is the preferred choice for most projects.
 
 ## Getting Started
 
