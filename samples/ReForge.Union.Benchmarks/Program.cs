@@ -61,6 +61,40 @@ namespace ReForge.Union.Benchmarks
 
             return area;
         }
+        
+        [Benchmark]
+        public double OneOfBased()
+        {
+            var shape = new ReForge.Union.Benchmarks.OneOfBased.Shape(new ReForge.Union.Benchmarks.OneOfBased.Circle(10));
+            double area = 0;
+            for (int i = 0; i < Iterations; i++)
+            {
+                area = shape.Match(
+                    circle => Math.PI * circle.Radius * circle.Radius,
+                    rectangle => rectangle.Width * rectangle.Height,
+                    triangle =>
+                    {
+                        var s = (triangle.Side1 + triangle.Side2 + triangle.Side3) / 2;
+                        return Math.Sqrt(s * (s - triangle.Side1) * (s - triangle.Side2) * (s - triangle.Side3));
+                    }
+                );
+            }
+
+            return area;
+        }
+        
+        [Benchmark]
+        public double ReForgeUnionBased()
+        {
+            var shape = new ReForge.Union.Benchmarks.ReForgeUnionBased.Shape.Circle(10);
+            double area = 0;
+            for (int i = 0; i < Iterations; i++)
+            {
+                area = shape.Area;
+            }
+
+            return area;
+        }
     }
 
 }

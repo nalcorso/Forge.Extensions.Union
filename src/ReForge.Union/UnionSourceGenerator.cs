@@ -61,14 +61,17 @@ public class UnionSourceGenerator : IIncrementalGenerator
         
         sourceBuilder.AppendLine("using System;");
         sourceBuilder.AppendLine("using System.Diagnostics.CodeAnalysis;");
-            
-            
-        if (SyntaxNodeHelper.TryGetParentSyntax(typeDeclaration, out NamespaceDeclarationSyntax? namespaceDeclarationSyntax))
+        
+        var namespaceName = GetNamespace(typeDeclaration);
+        if (namespaceName is not null)
         {
-            var namespaceName = namespaceDeclarationSyntax!.Name.ToString();
-
-            //Log(context, "Detected Namespace: " + namespaceName);
+            Log(context, "Detected Namespace: " + namespaceName);
             sourceBuilder.AppendLine($"namespace {namespaceName}");
+        }
+        else
+        {
+            Log(context, "No namespace detected");
+            return;
         }
             
         var unionName = typeDeclaration.Identifier.Text;
@@ -155,5 +158,24 @@ public class UnionSourceGenerator : IIncrementalGenerator
     private static string Indent(int indentLevel)
     {
         return new string('\t', indentLevel);
+    }
+    
+    private static string? GetNamespace(SyntaxNode node)
+    {
+        while (node != null)
+        {
+            if (node is NamespaceDeclarationSyntax namespaceDeclaration)
+            {
+                return namespaceDeclaration.Name.ToString();
+            }
+            else if (node is FileScopedNamespaceDeclarationSyntax fileScopedNamespaceDeclaration)
+            {
+                return fileScopedNamespaceDeclaration.Name.ToString();
+            }
+
+            node = node.Parent;
+        }
+
+        return null; // or throw an exception if a namespace is mandatory
     }
 }

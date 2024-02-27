@@ -10,6 +10,13 @@
     <ItemGroup>
       <PackageReference Include="BenchmarkDotNet" Version="0.13.12" />
       <PackageReference Include="OneOf" Version="3.0.263" />
+      <PackageReference Include="OneOf.SourceGenerator" Version="3.0.263" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\ReForge.Union\ReForge.Union.csproj"
+                          ReferenceOutputAssembly="true"
+                          OutputItemType="Analyzer" />
     </ItemGroup>
 
 </Project>
