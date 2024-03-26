@@ -18,16 +18,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{AF1F59B6
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{33F549E3-D49C-40AB-99CE-9EA5B879EFC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReForge.Union", "src\ReForge.Union\ReForge.Union.csproj", "{5EDE09C7-7BF0-4F70-83EF-729F82F94E06}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forge.Extensions.Union", "src\Forge.Extensions.Union\Forge.Extensions.Union.csproj", "{5EDE09C7-7BF0-4F70-83EF-729F82F94E06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReForge.Union.DevScratch", "samples\ReForge.Union.DevScratch\ReForge.Union.DevScratch.csproj", "{0D52E091-80A2-4E9C-9BD3-CB8F5BF1C4A2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forge.Extensions.Union.DevScratch", "samples\Forge.Extensions.Union.DevScratch\Forge.Extensions.Union.DevScratch.csproj", "{0D52E091-80A2-4E9C-9BD3-CB8F5BF1C4A2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{AE0A9EBA-899C-4F4C-9AC0-64681589A018}"
 	ProjectSection(SolutionItems) = preProject
 		images\icon.png = images\icon.png
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReForge.Union.Benchmarks", "samples\ReForge.Union.Benchmarks\ReForge.Union.Benchmarks.csproj", "{94B24B43-E6FB-4361-B2C5-1FB8B19E57EB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forge.Extensions.Union.Benchmarks", "samples\Forge.Extensions.Union.Benchmarks\Forge.Extensions.Union.Benchmarks.csproj", "{94B24B43-E6FB-4361-B2C5-1FB8B19E57EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

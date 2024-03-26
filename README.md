@@ -7,7 +7,7 @@
 
 > ⚠️ This project is in the early stages of development and should be used with caution. It is currently slower, uses more memory and is less feature-rich than other libraries for implementing Discriminated Unions in C#. Please consider using [OneOf](https://github.com/mcintyre321/OneOf/) for production use.
 
-ReForge.Union is a source generator for C# that provides an easy way to implement basic Discriminated Unions in your code, and certainly for production use.
+Forge.Extensions.Union is a source generator for C# that provides an easy way to implement basic Discriminated Unions in your code, and certainly for production use.
 
 ## Alternatives
 
@@ -18,7 +18,7 @@ ReForge.Union is a source generator for C# that provides an easy way to implemen
 To use ReForge.Union, you need to install the NuGet package. You can do this through the NuGet package manager, or by using the dotnet CLI:
 
 ```shell
-dotnet add package ReForge.Union
+dotnet add package Forge.Extensions.Union
 ```
 
 ## Usage

@@ -1,5 +1,5 @@
 ﻿// Test app to check performance characteristics of various implementation choices.
-// Note: ReForge.Union is not designed to be an overly performant library, however it is necessary to understand the
+// Note: Forge.Extensions.Union is not designed to be an overly performant library, however it is necessary to understand the
 // the performance characteristics of the library to make informed decisions about its implementation.
 
 using BenchmarkDotNet.Attributes;

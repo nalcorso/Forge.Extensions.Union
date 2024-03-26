@@ -37,7 +37,7 @@ area = shape.Match(
 
 Console.WriteLine($"Area: {area}");
 
-// Use the ReForge.Union Source Generator to create a Discriminated Union from the following code
+// Use the Forge.Extensions.Union Source Generator to create a Discriminated Union from the following code
 namespace DevScratch
 {
     [Union]

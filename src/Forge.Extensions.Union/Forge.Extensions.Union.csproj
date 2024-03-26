@@ -8,18 +8,19 @@
         <IncludeBuildOutput>false</IncludeBuildOutput>
         <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
         <LangVersion>12</LangVersion>
-        <Version>0.1.0-beta.2</Version>
+        <Version>0.1.0-beta.3</Version>
         <Authors>Nicholas Alcorso</Authors>
-        <PackageId>ReForge.Union</PackageId>
+        <PackageId>Forge.Extensions.Union</PackageId>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/nalcorso/ReForge.Union</PackageProjectUrl>
         <PackageIcon>icon.png</PackageIcon>
         <PackageTags>DiscriminatedUnions, C#, SourceGenerator</PackageTags>
         <PackageReleaseNotes>Initial beta release of ReForge.Union.</PackageReleaseNotes>
-        <Description>ReForge.Union is a source generator for C# that provides an easy way to implement basic Discriminated Unions in your code.</Description>
-        <RepositoryUrl>https://github.com/nalcorso/ReForge.Union.git</RepositoryUrl>
+        <Description>Forge.Extensions.Union is a source generator for C# that provides an easy way to implement basic Discriminated Unions in your code.</Description>
+        <RepositoryUrl>https://github.com/nalcorso/Forge.Extensions.Union.git</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
+        <RootNamespace>Forge.Extensions</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
