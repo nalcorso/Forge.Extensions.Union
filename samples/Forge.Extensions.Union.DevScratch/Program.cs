@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using DevScratch;
-using ReForge.Union;
+using Forge.Extensions;
 
 Console.WriteLine("ReForge Discriminated Union Example");
 

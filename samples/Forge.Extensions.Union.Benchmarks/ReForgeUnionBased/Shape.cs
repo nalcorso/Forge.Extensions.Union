@@ -1,4 +1,6 @@
-﻿namespace ReForge.Union.Benchmarks.ReForgeUnionBased;
+﻿using Forge.Extensions;
+
+namespace ReForge.Union.Benchmarks.ReForgeUnionBased;
 
 [Union]
 public abstract partial record Shape

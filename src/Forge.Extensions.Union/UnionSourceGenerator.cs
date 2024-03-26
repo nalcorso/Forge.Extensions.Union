@@ -2,7 +2,7 @@
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-namespace ReForge.Union;
+namespace Forge.Extensions;
 
 [Generator]
 public class UnionSourceGenerator : IIncrementalGenerator

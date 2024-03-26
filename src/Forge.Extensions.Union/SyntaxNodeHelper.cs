@@ -1,6 +1,6 @@
 ﻿using Microsoft.CodeAnalysis;
 
-namespace ReForge.Union;
+namespace Forge.Extensions;
 
 internal static class SyntaxNodeHelper
 {
